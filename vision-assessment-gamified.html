@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover your perfect vision correction solution with Khanna Vision Institute's interactive assessment tool">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Vision Quest">
+    
+    <title>Vision Quest - Unlock Your Perfect Vision 🎮</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkdlblogR2FtZSAtIEtoYW5uYSBWaXNpb24gSW5zdGl0dXRlIiwKICAic2hvcnRfbmFtZSI6ICJHZW5aIEdhbWUiLAogICJkZXNjcmlwdGlvbiI6ICJVbmxvY2sgeW91ciBwZXJmZWN0IHZpc2lvbiBzb2x1dGlvbiIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAidGhlbWVfY29sb3IiOiAiIzY2N2VlYSIsCiAgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQXhPVElnTVRreUlqNDhZMmx5WTJ4bElHTjRQU0k1TmlJZ1kzazlJamsySWlCeVBTSTRNQ0lnWm1sc2JEMGlJelkyTjJWbFlTSXZQangwWlhoMElIZzlJamsySWlCNVBTSTVOaUlnWm05dWRDMXphWHBsUFNJM01pSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm1sc2JEMGlJM2RvYVhSbElqNGlPMFY1WlRzaVBDOTBaWGgwUGp3dmMzWm5QZz09IiwKICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OFkybHlZMnhsSUdONFBTSTFNVFlpSUdONVBTSTFNVFlpSUhJOUlqSXdNQ0lnWm1sc2JEMGlJelkyTjBWRlFTSXZQangwWlhoMElIZzlJalV4TmlJZ2VUMGlOVEUySWlCbWIyNTBMWE5wZW1VOUlqRTBOQ0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJZ1ptbHNiRDBpSTNkb2FYUmxJajRpTzBWNVpUc2lQQzkwWlhoMFBqd3ZjM1puUGc9PSIsCiAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0KICBdCn0=">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            color: #ffffff;
+        }
+
+        /* Points Display */
+        .points-header {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff88;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3), 0 0 20px rgba(0, 255, 136, 0.1);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideInRight 0.5s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .points-icon {
+            font-size: 24px;
+            animation: rotate 3s linear infinite;
+            filter: drop-shadow(0 0 10px #ffff00);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .points-value {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .points-label {
+            font-size: 12px;
+            color: #00ff88;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        /* Point Gain Animation */
+        .point-gain {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            font-weight: 900;
+            color: #ffff00;
+            text-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 255, 0, 0.4);
+            animation: pointGain 1s ease-out forwards;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        @keyframes pointGain {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Swipe Indicator */
+        .swipe-indicator {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #00ff88;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: pulse 2s infinite;
+            z-index: 100;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        /* Rewards Progress Bar */
+        .rewards-bar {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #00ff88;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+            backdrop-filter: blur(15px);
+        }
+
+        .rewards-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        .rewards-track {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .reward-milestone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reward-milestone:hover {
+            transform: scale(1.1);
+        }
+
+        .reward-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            border: 3px solid #333;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .reward-icon.unlocked {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 50%, #6bcf7f 100%);
+            border-color: #00ff88;
+            animation: unlock 0.5s ease;
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4), 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        @keyframes unlock {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.3) rotate(-10deg); }
+            75% { transform: scale(1.3) rotate(10deg); }
+        }
+
+        .reward-icon.locked::after {
+            content: '🔒';
+            position: absolute;
+            font-size: 16px;
+            bottom: -5px;
+            right: -5px;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+
+        .reward-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #00ff88;
+            margin-top: 5px;
+            text-align: center;
+            max-width: 70px;
+            text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+        }
+
+        .reward-points {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffff00;
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+        }
+
+        .progress-line {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 1;
+            border-radius: 2px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88 0%, #ffff00 50%, #ff6b6b 100%);
+            border-radius: 2px;
+            transition: width 0.5s ease;
+            box-shadow: 0 2px 10px rgba(0, 255, 136, 0.5);
+        }
+
+        /* Book Cover Display */
+        .book-cover {
+            width: 100px;
+            height: 130px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .smile-book {
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+        }
+
+        .pie-book {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 100%);
+        }
+
+        .book-title {
+            font-size: 12px;
+            margin-top: 5px;
+            line-height: 1.2;
+        }
+
+        .book-author {
+            font-size: 8px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* Reward Unlock Modal */
+        .reward-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .reward-modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .reward-modal-content {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 2px solid #00ff88;
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            animation: bounceIn 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .reward-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .reward-modal-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        }
+
+        .reward-modal-desc {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .reward-value {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 100%);
+            color: #1a1a2e;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .continue-btn {
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #1a1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .continue-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
+        }
+
+        /* Animated background elements */
+        .bg-decoration {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.05;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .bg-decoration:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -150px;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.3) 0%, rgba(0, 255, 136, 0) 70%);
+            animation-delay: 0s;
+        }
+
+        .bg-decoration:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+            background: radial-gradient(circle, rgba(0, 204, 255, 0.3) 0%, rgba(0, 204, 255, 0) 70%);
+            animation-delay: 5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(30px) rotate(240deg); }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            border-radius: 24px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            position: relative;
+            backdrop-filter: blur(20px);
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, 
+                #00ff88 0%, 
+                #00ccff 25%, 
+                #ff6b6b 50%, 
+                #ffd93d 75%, 
+                #00ff88 100%);
+            background-size: 200% 100%;
+            border-radius: 24px 24px 0 0;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 35px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-eye {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 50%, #ff6b6b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3), 0 0 50px rgba(0, 255, 136, 0.1);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .logo-eye::before {
+            content: '👁️';
+            font-size: 50px;
+            filter: brightness(0) invert(1);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .subtitle {
+            color: #cccccc;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .quest-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 100%);
+            color: #1a1a2e;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .progress-container {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            position: relative;
+        }
+
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background: #e2e8f0;
+            z-index: -1;
+        }
+
+        .step.completed:not(:last-child)::after {
+            background: linear-gradient(90deg, #667eea 0%, #FFD700 100%);
+        }
+
+        .step-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #a0aec0;
+            transition: all 0.3s ease;
+        }
+
+        .step.active .step-circle,
+        .step.completed .step-circle {
+            background: linear-gradient(135deg, #667eea 0%, #FFD700 100%);
+            color: white;
+        }
+
+        .step.completed .step-circle::before {
+            content: '✓';
+        }
+
+        .step-label {
+            font-size: 11px;
+            color: #718096;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .question-container {
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        .question-container.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .question {
+            font-size: 22px;
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .question-helper {
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            margin: -20px 0 25px 0;
+            font-style: italic;
+        }
+
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .option-btn {
+            background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            font-size: 16px;
+            color: #2d3748;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-btn:hover {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .option-icon {
+            font-size: 24px;
+            margin-right: 12px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .option-text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .prescription-note {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .checkbox-option:hover {
+            background: #edf2f7;
+            border-color: #667eea;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-option label {
+            cursor: pointer;
+            color: #2d3748;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            flex: 1;
+        }
+
+        .nav-btn.back {
+            background: #edf2f7;
+            color: #4a5568;
+        }
+
+        .nav-btn.back:hover {
+            background: #e2e8f0;
+        }
+
+        .nav-btn.next {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .nav-btn.next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .analyzing {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .analyzing.active {
+            display: block;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #e2e8f0;
+            border-top: 4px solid #FFD700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .result-container {
+            display: none;
+        }
+
+        .result-container.active {
+            display: block;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 35px;
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .result-description {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .grand-prize-section {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+            animation: prizeGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes prizeGlow {
+            0%, 100% { box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3); }
+            50% { box-shadow: 0 20px 60px rgba(255, 215, 0, 0.5); }
+        }
+
+        .grand-prize-title {
+            font-size: 36px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .rewards-collected {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .rewards-collected h3 {
+            color: #2d3748;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .reward-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .reward-item-icon {
+            font-size: 32px;
+        }
+
+        .reward-item-text {
+            flex: 1;
+        }
+
+        .reward-item-title {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 3px;
+        }
+
+        .reward-item-value {
+            font-size: 14px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .cta-title {
+            color: #2d3748;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .cta-buttons {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .cta-btn {
+            padding: 16px 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .cta-btn.secondary {
+            background: #f7fafc;
+            color: #4a5568;
+            border: 2px solid #e2e8f0;
+        }
+
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .phone-numbers {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 640px) {
+            .points-header {
+                top: 10px;
+                right: 10px;
+                padding: 12px 20px;
+            }
+
+            .rewards-bar {
+                padding: 15px;
+            }
+
+            .reward-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .reward-label {
+                font-size: 9px;
+                max-width: 60px;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .step-label {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-decoration"></div>
+    <div class="bg-decoration"></div>
+
+    <!-- Points Display -->
+    <div class="points-header">
+        <div class="points-icon">⭐</div>
+        <div>
+            <div class="points-value" id="pointsValue">0</div>
+            <div class="points-label">POINTS</div>
+        </div>
+    </div>
+
+    <!-- Reward Unlock Modal -->
+    <div class="reward-modal" id="rewardModal">
+        <div class="reward-modal-content">
+            <div class="reward-emoji" id="rewardEmoji">🎁</div>
+            <div class="reward-modal-title" id="rewardTitle">Reward Unlocked!</div>
+            <div class="reward-modal-desc" id="rewardDesc">You've earned something special!</div>
+            <div class="reward-value" id="rewardValue">FREE GIFT</div>
+            <button class="continue-btn" onclick="closeRewardModal()">Let's Go! 🚀</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <div class="logo-eye"></div>
+            <h1>GenZ Game</h1>
+            <div class="subtitle">Unlock rewards on your journey to perfect vision</div>
+            <div class="quest-badge">🎮 LEVEL UP YOUR VISION</div>
+        </div>
+
+        <!-- Rewards Progress Bar -->
+        <div class="rewards-bar">
+            <div class="rewards-title">🏆 Unlock Rewards as You Go</div>
+            <div class="rewards-track">
+                <div class="progress-line">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <div class="reward-milestone" data-points="100" onclick="showRewardDetails(0)">
+                    <div class="reward-icon locked" id="reward0">📖</div>
+                    <div class="reward-label">Free SMILE Book<br><span class="reward-points">100pts</span></div>
+                </div>
+                <div class="reward-milestone" data-points="300" onclick="showRewardDetails(1)">
+                    <div class="reward-icon locked" id="reward1">☕</div>
+                    <div class="reward-label">Free Consult<br><span class="reward-points">300pts</span></div>
+                </div>
+                <div class="reward-milestone" data-points="600" onclick="showRewardDetails(2)">
+                    <div class="reward-icon locked" id="reward2">👁️</div>
+                    <div class="reward-label">Full Exam<br><span class="reward-points">600pts</span></div>
+                </div>
+                <div class="reward-milestone" data-points="900" onclick="showRewardDetails(3)">
+                    <div class="reward-icon locked" id="reward3">💎</div>
+                    <div class="reward-label">$500 OFF!<br><span class="reward-points">900pts</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-steps">
+                <div class="step active" id="step1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Age</div>
+                </div>
+                <div class="step" id="step2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Vision</div>
+                </div>
+                <div class="step" id="step3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Lifestyle</div>
+                </div>
+                <div class="step" id="step4">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Activities</div>
+                </div>
+                <div class="step" id="step5">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Health</div>
+                </div>
+                <div class="step" id="step6">
+                    <div class="step-circle">6</div>
+                    <div class="step-label">Medical</div>
+                </div>
+                <div class="step" id="step7">
+                    <div class="step-circle">7</div>
+                    <div class="step-label">Goals</div>
+                </div>
+                <div class="step" id="step8">
+                    <div class="step-circle">8</div>
+                    <div class="step-label">Finance</div>
+                </div>
+                <div class="step" id="step9">
+                    <div class="step-circle">9</div>
+                    <div class="step-label">Results</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Questions (same as before) -->
+        <div class="question-container active" id="q1">
+            <div class="question">What's your age?</div>
+            <div class="question-helper">+100 points per answer! 🎯</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(1, '18-25')">
+                    <span class="option-icon">🎓</span>
+                    <span class="option-text">18-25 years</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, '25-45')">
+                    <span class="option-icon">💼</span>
+                    <span class="option-text">25-45 years</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, '45-65')">
+                    <span class="option-icon">🏆</span>
+                    <span class="option-text">45-65 years</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, '65+')">
+                    <span class="option-icon">👑</span>
+                    <span class="option-text">65+ years</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="question-container" id="q2">
+            <div class="question">What is your current prescription?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(2, 'nearsighted-mild')">
+                    <span class="option-text">
+                        <strong>Nearsighted (0 to -6)</strong>
+                        <div class="prescription-note">Can see near, not far</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'nearsighted-extreme')">
+                    <span class="option-text">
+                        <strong>Extremely Nearsighted (-6 to -20)</strong>
+                        <div class="prescription-note">Cannot see more than an arm's length</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'hyperopic-mild')">
+                    <span class="option-text">
+                        <strong>Farsighted (0 to +6)</strong>
+                        <div class="prescription-note">Can see far, not near</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'hyperopic-extreme')">
+                    <span class="option-text">
+                        <strong>Extremely Farsighted (+6 to +10)</strong>
+                        <div class="prescription-note">Can see far, not middle or near</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'bifocals')">
+                    <span class="option-text">
+                        <strong>Bifocals/Progressive</strong>
+                        <div class="prescription-note">Cannot see far nor near clearly</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'astigmatism')">
+                    <span class="option-text">
+                        <strong>Astigmatism</strong>
+                        <div class="prescription-note">Blurry vision at all distances</div>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="question-container" id="q3">
+            <div class="question">Which best describes your lifestyle?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(3, 'very-active')">
+                    <span class="option-icon">🏃‍♂️</span>
+                    <span class="option-text">Very Active - Sports & outdoor activities daily</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(3, 'moderately-active')">
+                    <span class="option-icon">🚴‍♀️</span>
+                    <span class="option-text">Moderately Active - Regular exercise & activities</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(3, 'office-professional')">
+                    <span class="option-icon">💻</span>
+                    <span class="option-text">Office Professional - Mostly computer work</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(3, 'mixed')">
+                    <span class="option-icon">⚖️</span>
+                    <span class="option-text">Mixed - Balance of desk work and activities</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="question-container" id="q4">
+            <div class="question">Select all activities that are important to you:</div>
+            <div class="checkbox-group">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="swimming" value="swimming">
+                    <label for="swimming">🏊 Swimming/Water Sports</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="contact-sports" value="contact-sports">
+                    <label for="contact-sports">🥊 Contact Sports</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="reading" value="reading">
+                    <label for="reading">📚 Reading</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="computer" value="computer">
+                    <label for="computer">💻 Computer Work</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="driving" value="driving">
+                    <label for="driving">🚗 Night Driving</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="detail-work" value="detail-work">
+                    <label for="detail-work">🔬 Detail Work</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="outdoor" value="outdoor">
+                    <label for="outdoor">🏔️ Outdoor Adventures</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="photography" value="photography">
+                    <label for="photography">📸 Photography</label>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button class="nav-btn back" onclick="previousQuestion(4)">Back</button>
+                <button class="nav-btn next" onclick="selectActivities()">Continue</button>
+            </div>
+        </div>
+
+        <div class="question-container" id="q5">
+            <div class="question">Do you have any of these eye conditions?</div>
+            <div class="question-helper">Select all that apply</div>
+            <div class="checkbox-group">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="dry-eyes" value="dry-eyes">
+                    <label for="dry-eyes">Dry Eyes</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cataracts" value="cataracts">
+                    <label for="cataracts">Cataracts</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="glaucoma" value="glaucoma">
+                    <label for="glaucoma">Glaucoma</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="keratoconus" value="keratoconus">
+                    <label for="keratoconus">Keratoconus</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="none" value="none">
+                    <label for="none">None of the above</label>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button class="nav-btn back" onclick="previousQuestion(5)">Back</button>
+                <button class="nav-btn next" onclick="selectConditions()">Continue</button>
+            </div>
+        </div>
+
+        <div class="question-container" id="q6">
+            <div class="question">Do any of these currently apply to you?</div>
+            <div class="question-helper">These are temporary conditions that may affect timing</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(6, 'accutane')">
+                    <span class="option-icon">💊</span>
+                    <span class="option-text">Taking or recently took Accutane (within 6 months)</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(6, 'pregnant')">
+                    <span class="option-icon">🤰</span>
+                    <span class="option-text">Currently pregnant</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(6, 'breastfeeding')">
+                    <span class="option-icon">👶</span>
+                    <span class="option-text">Currently breastfeeding</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(6, 'none-medical')">
+                    <span class="option-icon">✅</span>
+                    <span class="option-text">None of these apply to me</span>
+                </button>
+            </div>
+            <div class="navigation-buttons" style="margin-top: 25px;">
+                <button class="nav-btn back" onclick="previousQuestion(6)" style="width: auto;">Back</button>
+            </div>
+        </div>
+
+        <div class="question-container" id="q7">
+            <div class="question">What's your primary vision goal?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(7, 'freedom')">
+                    <span class="option-icon">🎯</span>
+                    <span class="option-text">Complete freedom from glasses & contacts</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'reduce')">
+                    <span class="option-icon">👓</span>
+                    <span class="option-text">Reduce dependence on glasses</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'active')">
+                    <span class="option-icon">⚡</span>
+                    <span class="option-text">Better vision for active lifestyle</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'professional')">
+                    <span class="option-icon">💼</span>
+                    <span class="option-text">Enhanced vision for professional life</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'presbyopia')">
+                    <span class="option-icon">📖</span>
+                    <span class="option-text">Eliminate reading glasses</span>
+                </button>
+            </div>
+            <div class="navigation-buttons" style="margin-top: 25px;">
+                <button class="nav-btn back" onclick="previousQuestion(7)" style="width: auto;">Back</button>
+            </div>
+        </div>
+
+        <div class="question-container" id="q8">
+            <div class="question">How are you planning to invest in your vision?</div>
+            <div class="question-helper">Procedures range from $2,700-$5,000 per eye</div>
+            <div class="options">
+                <button class="option-btn" onclick="finalizeAssessment('cash')">
+                    <span class="option-icon">💵</span>
+                    <span class="option-text">Pay in full (Often includes cash discount)</span>
+                </button>
+                <button class="option-btn" onclick="finalizeAssessment('financing')" style="border: 3px solid #4CAF50;">
+                    <span class="option-icon">💳</span>
+                    <span class="option-text">
+                        <strong>Monthly Financing with Alpheon</strong>
+                        <div class="prescription-note">0% APR available • As low as $89/month</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="finalizeAssessment('insurance')">
+                    <span class="option-icon">📋</span>
+                    <span class="option-text">Insurance/FSA/HSA</span>
+                </button>
+                <button class="option-btn" onclick="finalizeAssessment('undecided')">
+                    <span class="option-icon">🤔</span>
+                    <span class="option-text">Haven't decided yet</span>
+                </button>
+            </div>
+            <div class="navigation-buttons" style="margin-top: 25px;">
+                <button class="nav-btn back" onclick="previousQuestion(8)" style="width: auto;">Back</button>
+            </div>
+        </div>
+
+        <div class="analyzing" id="analyzing">
+            <div class="spinner"></div>
+            <h2 style="color: #2d3748; margin-bottom: 10px;">Analyzing Your Profile...</h2>
+            <p style="color: #718096;">Creating your personalized vision solution</p>
+        </div>
+
+        <div class="result-container" id="results">
+            <div class="grand-prize-section">
+                <div class="reward-emoji" style="font-size: 80px; margin-bottom: 15px;">🎉</div>
+                <div class="grand-prize-title">QUEST COMPLETE!</div>
+                <div style="color: white; font-size: 48px; font-weight: 900; margin: 20px 0;">$500 OFF</div>
+                <div style="color: white; font-size: 20px; margin-bottom: 15px;">YOUR VISION PROCEDURE</div>
+                <div style="background: rgba(255,255,255,0.3); padding: 15px; border-radius: 15px; color: white;">
+                    <strong>💎 Plus all rewards unlocked!</strong>
+                </div>
+            </div>
+
+            <div class="rewards-collected">
+                <h3>🏆 Your Rewards Vault</h3>
+                <div class="reward-item">
+                    <div class="reward-item-icon">📖</div>
+                    <div class="reward-item-text">
+                        <div class="reward-item-title">Free SMILE Book</div>
+                        <div class="reward-item-value">Educational guide • Digital copy</div>
+                    </div>
+                </div>
+                <div class="reward-item">
+                    <div class="reward-item-icon">☕</div>
+                    <div class="reward-item-text">
+                        <div class="reward-item-title">Free Consultation</div>
+                        <div class="reward-item-value">$150 value • No obligation</div>
+                    </div>
+                </div>
+                <div class="reward-item">
+                    <div class="reward-item-icon">👁️</div>
+                    <div class="reward-item-text">
+                        <div class="reward-item-title">Full Eye Exam</div>
+                        <div class="reward-item-value">$350 value • Comprehensive analysis</div>
+                    </div>
+                </div>
+                <div class="reward-item" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;">
+                    <div class="reward-item-icon">💎</div>
+                    <div class="reward-item-text">
+                        <div class="reward-item-title" style="color: white;">$500 OFF Procedure</div>
+                        <div class="reward-item-value" style="color: rgba(255,255,255,0.9);">Valid on SMILE, LASIK, EVO ICL, or PIE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div style="font-size: 14px; opacity: 0.9; margin-bottom: 10px;">YOUR PERFECT MATCH</div>
+                <div class="result-title" id="procedureName">Custom Procedure Recommendation</div>
+                <div class="result-description" id="procedureDescription">
+                    Based on your comprehensive assessment and unique profile...
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <div class="cta-title">Claim Your Rewards Now! 🎁</div>
+                <div style="color: #718096; margin-bottom: 20px;">Book within 48 hours to secure all rewards</div>
+                <div class="cta-buttons">
+                    <button class="cta-btn primary" onclick="scheduleConsultation()">
+                        📅 Book Free Consultation
+                    </button>
+                    <div class="contact-buttons">
+                        <button class="cta-btn secondary" onclick="callNow()">
+                            📞 Call Us
+                        </button>
+                        <button class="cta-btn secondary" onclick="textNow()">
+                            💬 Text Us
+                        </button>
+                    </div>
+                </div>
+                <div class="phone-numbers">
+                    Beverly Hills: (310) 482-1240 | Westlake Village: (805) 230-2126
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register(getServiceWorkerURL())
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker failed'));
+            });
+        }
+
+        function getServiceWorkerURL() {
+            const swCode = `
+                const CACHE_NAME = 'genz-game-v1';
+                self.addEventListener('install', event => {
+                    event.waitUntil(caches.open(CACHE_NAME));
+                });
+                self.addEventListener('fetch', event => {
+                    event.respondWith(
+                        caches.match(event.request)
+                            .then(response => response || fetch(event.request))
+                    );
+                });
+            `;
+            const blob = new Blob([swCode], { type: 'application/javascript' });
+            return URL.createObjectURL(blob);
+        }
+
+        // Gamification Variables
+        let points = 0;
+        let unlockedRewards = [];
+        const rewardMilestones = [
+            { points: 100, emoji: '📖', title: 'Free SMILE Book Unlocked!', desc: 'Your complete guide to SMILE procedure', value: 'FREE DIGITAL BOOK' },
+            { points: 300, emoji: '☕', title: 'Free Consultation Unlocked!', desc: 'One-on-one expert consultation with Dr. Khanna', value: '$150 VALUE' },
+            { points: 600, emoji: '👁️', title: 'Full Eye Exam Unlocked!', desc: 'Comprehensive vision analysis and assessment', value: '$350 VALUE' },
+            { points: 900, emoji: '💎', title: 'GRAND PRIZE UNLOCKED!', desc: 'Major discount on your vision procedure!', value: '$500 OFF PROCEDURE' }
+        ];
+
+        let assessment = {
+            age: '',
+            prescription: '',
+            lifestyle: '',
+            activities: [],
+            conditions: [],
+            medicalStatus: '',
+            goal: '',
+            financing: ''
+        };
+
+        let currentQuestion = 1;
+
+        const procedures = {
+            'SMILE': 'SMILE (Small Incision Lenticule Extraction) represents the pinnacle of laser vision correction technology. Perfect for your active lifestyle and prescription range, offering the quickest recovery with maximum precision.',
+            'EVO ICL': 'EVO ICL (Implantable Collamer Lens) is the revolutionary solution for high prescriptions. This biocompatible lens works with your natural eye, providing crisp HD vision while being completely reversible.',
+            'Custom LASIK': 'Our advanced Custom LASIK uses wavefront technology to create a treatment unique to your eyes. Perfect for your prescription range with proven long-term results.',
+            'Hyperopic LASIK': 'Specialized LASIK designed specifically for farsightedness. Using advanced ablation patterns to provide clear vision at all distances.',
+            'PIE': 'Presbyopic Implants in Eye (PIE) provide the ultimate vision solution for presbyopia. These advanced multifocal lenses give you crisp vision at all distances.',
+            'Robotic Cataract + PIE': 'Experience the future of vision with our robotic laser cataract surgery combined with premium presbyopic implants.',
+            'Cross-linking + Custom': 'Advanced corneal cross-linking combined with customized vision correction. This dual approach strengthens your cornea while optimizing your vision.'
+        };
+
+        function addPoints(amount) {
+            points += amount;
+            document.getElementById('pointsValue').textContent = points;
+            
+            // Animate point gain
+            const gainEl = document.createElement('div');
+            gainEl.className = 'point-gain';
+            gainEl.textContent = `+${amount} ⭐`;
+            document.body.appendChild(gainEl);
+            setTimeout(() => gainEl.remove(), 1000);
+
+            // Update progress bar
+            const maxPoints = 900;
+            const progress = Math.min((points / maxPoints) * 100, 100);
+            document.getElementById('progressFill').style.width = progress + '%';
+
+            // Check for reward unlocks
+            checkRewardUnlocks();
+
+            // Track in GA
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'points_earned', {
+                    'event_category': 'Gamification',
+                    'event_label': `${amount} points`,
+                    'value': points
+                });
+            }
+        }
+
+        function checkRewardUnlocks() {
+            rewardMilestones.forEach((reward, index) => {
+                if (points >= reward.points && !unlockedRewards.includes(index)) {
+                    unlockedRewards.push(index);
+                    unlockReward(index);
+                }
+            });
+        }
+
+        function unlockReward(rewardIndex) {
+            const reward = rewardMilestones[rewardIndex];
+            const rewardIcon = document.getElementById(`reward${rewardIndex}`);
+            
+            // Unlock animation
+            rewardIcon.classList.remove('locked');
+            rewardIcon.classList.add('unlocked');
+
+            // Show modal
+            setTimeout(() => {
+                document.getElementById('rewardEmoji').textContent = reward.emoji;
+                document.getElementById('rewardTitle').textContent = reward.title;
+                document.getElementById('rewardDesc').textContent = reward.desc;
+                document.getElementById('rewardValue').textContent = reward.value;
+                document.getElementById('rewardModal').classList.add('active');
+
+                // Track in GA
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'reward_unlocked', {
+                        'event_category': 'Gamification',
+                        'event_label': reward.title,
+                        'value': reward.points
+                    });
+                }
+            }, 500);
+        }
+
+        function closeRewardModal() {
+            document.getElementById('rewardModal').classList.remove('active');
+        }
+
+        function showRewardDetails(index) {
+            const reward = rewardMilestones[index];
+            if (unlockedRewards.includes(index)) {
+                alert(`✅ ${reward.title}\n\n${reward.desc}\n\nValue: ${reward.value}`);
+            } else {
+                alert(`🔒 Locked\n\nEarn ${reward.points} points to unlock!\n\nCurrent points: ${points}`);
+            }
+        }
+
+        function updateProgress(step) {
+            for (let i = 1; i <= 9; i++) {
+                const stepEl = document.getElementById(`step${i}`);
+                if (i < step) {
+                    stepEl.classList.add('completed');
+                    stepEl.classList.remove('active');
+                } else if (i === step) {
+                    stepEl.classList.add('active');
+                    stepEl.classList.remove('completed');
+                } else {
+                    stepEl.classList.remove('active', 'completed');
+                }
+            }
+        }
+
+        function selectAnswer(questionNum, answer) {
+            addPoints(100); // Award points for each answer
+
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'question_answered', {
+                    'event_category': 'Assessment',
+                    'event_label': `Q${questionNum}: ${answer}`
+                });
+            }
+
+            if (questionNum === 1) {
+                assessment.age = answer;
+                currentQuestion = 2;
+                showQuestion(2);
+            } else if (questionNum === 2) {
+                assessment.prescription = answer;
+                currentQuestion = 3;
+                showQuestion(3);
+            } else if (questionNum === 3) {
+                assessment.lifestyle = answer;
+                currentQuestion = 4;
+                showQuestion(4);
+            } else if (questionNum === 6) {
+                assessment.medicalStatus = answer;
+                currentQuestion = 7;
+                showQuestion(7);
+            } else if (questionNum === 7) {
+                assessment.goal = answer;
+                currentQuestion = 8;
+                showQuestion(8);
+            }
+        }
+
+        function selectActivities() {
+            const checkboxes = document.querySelectorAll('#q4 input[type="checkbox"]:checked');
+            assessment.activities = Array.from(checkboxes).map(cb => cb.value);
+            
+            // Bonus points for each activity selected
+            const bonusPoints = checkboxes.length * 25;
+            addPoints(100 + bonusPoints);
+            
+            currentQuestion = 5;
+            showQuestion(5);
+        }
+
+        function selectConditions() {
+            const checkboxes = document.querySelectorAll('#q5 input[type="checkbox"]:checked');
+            assessment.conditions = Array.from(checkboxes).map(cb => cb.value);
+            addPoints(100);
+            currentQuestion = 6;
+            showQuestion(6);
+        }
+
+        function showQuestion(num) {
+            document.querySelectorAll('.question-container').forEach(q => {
+                q.classList.remove('active');
+            });
+            document.getElementById(`q${num}`).classList.add('active');
+            updateProgress(num);
+        }
+
+        function previousQuestion(currentQ) {
+            if (currentQ > 1) {
+                currentQuestion = currentQ - 1;
+                showQuestion(currentQuestion);
+            }
+        }
+
+        function finalizeAssessment(financing) {
+            assessment.financing = financing;
+            addPoints(100); // Final question points
+            
+            document.getElementById('q8').classList.remove('active');
+            document.getElementById('analyzing').classList.add('active');
+            updateProgress(9);
+            
+            setTimeout(() => {
+                showResults();
+            }, 2000);
+        }
+
+        function determineOptimalProcedure() {
+            const { age, prescription, lifestyle, activities, conditions } = assessment;
+            
+            if (conditions.includes('keratoconus')) return 'Cross-linking + Custom';
+            if (conditions.includes('cataracts') || age === '65+') return 'Robotic Cataract + PIE';
+            if (age === '45-65' && (prescription === 'bifocals' || prescription === 'hyperopic-extreme')) return 'PIE';
+            if (prescription === 'nearsighted-mild') return 'SMILE';
+            if (prescription === 'nearsighted-extreme') return 'EVO ICL';
+            if (prescription === 'hyperopic-mild') return 'Hyperopic LASIK';
+            if (prescription === 'hyperopic-extreme' || prescription === 'bifocals') return 'PIE';
+            if (prescription === 'astigmatism') return lifestyle === 'very-active' ? 'SMILE' : 'Custom LASIK';
+            
+            return 'Custom LASIK';
+        }
+
+        function showResults() {
+            document.getElementById('analyzing').classList.remove('active');
+            
+            const procedure = determineOptimalProcedure();
+            document.getElementById('procedureName').textContent = procedure;
+            document.getElementById('procedureDescription').textContent = procedures[procedure];
+            
+            document.getElementById('results').classList.add('active');
+
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'quest_completed', {
+                    'event_category': 'Conversion',
+                    'event_label': 'Assessment Complete',
+                    'value': points
+                });
+            }
+        }
+
+        function scheduleConsultation() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'schedule_consultation_click', {
+                    'event_category': 'Conversion',
+                    'event_label': 'Gamified Version'
+                });
+            }
+            window.open('https://www.khannainstitute.com/contact', '_blank');
+        }
+
+        function callNow() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'call_click', {
+                    'event_category': 'Conversion',
+                    'event_label': 'Gamified Version'
+                });
+            }
+            window.location.href = 'tel:3104821240';
+        }
+
+        function textNow() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'text_click', {
+                    'event_category': 'Conversion',
+                    'event_label': 'Gamified Version'
+                });
+            }
+            window.location.href = 'sms:3104821240&body=Hi! I just completed the Vision Quest and earned all rewards! I\'d love to claim them and learn more about my options.';
+        }
+    </script>
+</body>
+</html>
